@@ -9,7 +9,7 @@ module.exports = {
         sourceMapFilename: "bundle.js",
         publicPath: "/dist/"
     },
-    devtool: 'cheap-eval-source-map',
+    devtool: 'eval-source-map',
     devServer:{
         open: true,
         hot: true
