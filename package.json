@@ -5,14 +5,15 @@
   "main": "index.js",
   "scripts": {
     "dev": ".\\node_modules\\.bin\\webpack-dev-server --inline --progress",
-    "build": ".\\node_modules\\.bin\\webpack -d --watch",
-    "prod": ".\\node_modules\\.bin\\webpack -p"
+    "build": ".\\node_modules\\.bin\\webpack -d",
+    "build-prod": ".\\node_modules\\.bin\\webpack -p"
   },
   "author": "Daniel Fimiarz",
   "license": "ISC",
   "devDependencies": {
     "babel-core": "^6.24.1",
     "babel-loader": "^6.4.1",
+    "rimraf": "^2.6.1",
     "webpack": "^2.3.3",
     "webpack-dev-server": "^2.4.2"
   },

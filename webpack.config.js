@@ -1,3 +1,4 @@
+var webpack = require('webpack');
 var path = require('path');
 
 module.exports = {
@@ -5,12 +6,13 @@ module.exports = {
     output : {
         filename : 'bundle.js',
         path : path.resolve(__dirname,'dist/'),
-        sourceMapFilename: "[file].bundle.js",
+        sourceMapFilename: "bundle.js",
         publicPath: "/dist/"
     },
     devtool: 'cheap-eval-source-map',
     devServer:{
-        open: true
+        open: true,
+        hot: true
     },
     module: {
         rules: [
@@ -20,5 +22,8 @@ module.exports = {
                 loader: "babel-loader"
             }
         ]
-    }
+    },
+    plugins: [
+        new webpack.HotModuleReplacementPlugin()
+    ]
 }
